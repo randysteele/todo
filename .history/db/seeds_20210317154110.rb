@@ -7,8 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-todo1 = Task.create(name: "Complete coding challenge")
-todo2 = Task.create(name: "Clean bedroom")
-
-cat1 = Category.create(name: "Personal")
-cat2 = Category.create(name: "Professional")
+todo1 = Todo.Create(name: "Complete coding challene")
+todo2 = todo.Create(name: "Clean bedroom")
