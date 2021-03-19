@@ -18,7 +18,7 @@ end
   # GET /categories/new
   def new
     if params[:task_id] && @task = Task.find_by_id(params[:task_id])
-      @category = @task.categories.build
+    @category = @task.category.build
     else
       @category = Category.new
     end
