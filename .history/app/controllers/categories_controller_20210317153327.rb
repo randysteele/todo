@@ -3,13 +3,8 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    if params[:task_id] && @task = Task.find_by_id(params[:task_id])
-      @categories = @task.categories
-    else
     @categories = Category.all
   end
-end
-
 
   # GET /categories/1 or /categories/1.json
   def show
@@ -17,11 +12,7 @@ end
 
   # GET /categories/new
   def new
-    if params[:task_id] && @task = Task.find_by_id(params[:task_id])
-    @category = @task.category.build
-    else
-      @category = Category.new
-    end
+    @category = Category.new
   end
 
   # GET /categories/1/edit

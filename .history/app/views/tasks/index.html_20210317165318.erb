@@ -14,7 +14,11 @@
     <% @tasks.each do |task| %>
       <div>
         <li><%= task.name %></li>
-        <li><% task.category_id %></li>
+        <%
+=begin%>
+ <li><%% task.category_id%></li> 
+<%
+=end%>
         <p><%= link_to 'Show', task %>
         <%= link_to 'Edit', edit_task_path(task) %>
         <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></p>
